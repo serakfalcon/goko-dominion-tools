@@ -22,9 +22,6 @@ CREATE TABLE bot (
     pname character varying(100) NOT NULL
 );
 
-
-ALTER TABLE public.bot OWNER TO ai;
-
 --
 -- Data for Name: bot; Type: TABLE DATA; Schema: public; Owner: ai
 --
@@ -47,16 +44,6 @@ Warlord Bot
 
 ALTER TABLE ONLY bot
     ADD CONSTRAINT bot_pkey PRIMARY KEY (pname);
-
-
---
--- Name: bot; Type: ACL; Schema: public; Owner: ai
---
-
-REVOKE ALL ON TABLE bot FROM PUBLIC;
-REVOKE ALL ON TABLE bot FROM ai;
-GRANT ALL ON TABLE bot TO ai;
-GRANT SELECT ON TABLE bot TO forum;
 
 
 --

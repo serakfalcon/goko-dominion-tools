@@ -14,11 +14,11 @@ import postgresql
 
 from . import domgame
 from . import constants
-
+from . import db_config
 
 # Database connection object.
 # TODO: Initialized on first use instead of on load
-_con = postgresql.open(user='ai', host='localhost', database='goko')
+_con = postgresql.open(user=db_config.USER, host=db_config.HOST, database=db_config.DATABASE)
 
 
 def prepare(conn, sql, d):

@@ -10,11 +10,11 @@ from ..model import db_manager
 # leaderboard code.
 
 
-dominion_env = trueskill.TrueSkill(draw_probability=0.0175, backend='scipy')
+dominion_env = trueskill.TrueSkill(draw_probability=0.0175, backend='mpmath')
 isodominion_env = trueskill.TrueSkill(mu=25, sigma=25, beta=25, tau=25/100,
-                                      draw_probability=0.05, backend='scipy')
+                                      draw_probability=0.05, backend='mpmath')
 goko_env = trueskill.TrueSkill(mu=5500, sigma=2250, beta=1375, tau=27.5,
-                               draw_probability=0.05, backend='scipy')
+                               draw_probability=0.05, backend='mpmath')
 
 
 def rate(ra, rb, score, env):

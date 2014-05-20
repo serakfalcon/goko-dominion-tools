@@ -22,9 +22,6 @@ CREATE TABLE advbot (
     pname character varying(50)
 );
 
-
-ALTER TABLE public.advbot OWNER TO ai;
-
 --
 -- Data for Name: advbot; Type: TABLE DATA; Schema: public; Owner: ai
 --

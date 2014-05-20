@@ -37,8 +37,6 @@ CREATE TABLE advbot (
 );
 
 
-ALTER TABLE public.advbot OWNER TO ai;
-
 --
 -- Name: bot; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -46,9 +44,6 @@ ALTER TABLE public.advbot OWNER TO ai;
 CREATE TABLE bot (
     pname character varying(100) NOT NULL
 );
-
-
-ALTER TABLE public.bot OWNER TO ai;
 
 --
 -- Name: card_url; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -58,9 +53,6 @@ CREATE TABLE card_url (
     card character varying(30) NOT NULL,
     url character varying(200) NOT NULL
 );
-
-
-ALTER TABLE public.card_url OWNER TO ai;
 
 --
 -- Name: gain; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -73,9 +65,6 @@ CREATE TABLE gain (
     pname character varying(50) NOT NULL,
     turn smallint NOT NULL
 );
-
-
-ALTER TABLE public.gain OWNER TO ai;
 
 --
 -- Name: game; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -96,9 +85,6 @@ CREATE TABLE game (
     dup_supply boolean
 );
 
-
-ALTER TABLE public.game OWNER TO ai;
-
 --
 -- Name: old_rating; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -110,9 +96,6 @@ CREATE TABLE old_rating (
     rating smallint NOT NULL
 );
 
-
-ALTER TABLE public.old_rating OWNER TO ai;
-
 --
 -- Name: phash; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -121,9 +104,6 @@ CREATE TABLE phash (
     pname character varying(50),
     phash text
 );
-
-
-ALTER TABLE public.phash OWNER TO ai;
 
 --
 -- Name: presult; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -142,9 +122,6 @@ CREATE TABLE presult (
     pname_lower character varying(50)
 );
 
-
-ALTER TABLE public.presult OWNER TO ai;
-
 --
 -- Name: ret; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -157,8 +134,6 @@ CREATE TABLE ret (
     turn smallint NOT NULL
 );
 
-
-ALTER TABLE public.ret OWNER TO ai;
 
 --
 -- Name: temp_rcomp; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -174,9 +149,6 @@ CREATE TABLE temp_rcomp (
     r500 numeric
 );
 
-
-ALTER TABLE public.temp_rcomp OWNER TO ai;
-
 --
 -- Name: ts_rating; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -190,9 +162,6 @@ CREATE TABLE ts_rating (
     numgames integer,
     level_m3s numeric(6,4)
 );
-
-
-ALTER TABLE public.ts_rating OWNER TO ai;
 
 --
 -- Name: ts_rating_history; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -210,9 +179,6 @@ CREATE TABLE ts_rating_history (
     new_sigma numeric(6,4)
 );
 
-
-ALTER TABLE public.ts_rating_history OWNER TO ai;
-
 --
 -- Name: ts_rating_history_old; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -229,9 +195,6 @@ CREATE TABLE ts_rating_history_old (
     new_sigma numeric(6,4)
 );
 
-
-ALTER TABLE public.ts_rating_history_old OWNER TO ai;
-
 --
 -- Name: ts_rating_old; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -243,9 +206,6 @@ CREATE TABLE ts_rating_old (
     mu numeric(6,4),
     sigma numeric(6,4)
 );
-
-
-ALTER TABLE public.ts_rating_old OWNER TO ai;
 
 --
 -- Name: ts_state; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
@@ -261,9 +221,6 @@ CREATE TABLE ts_state (
     last_log character varying(50)
 );
 
-
-ALTER TABLE public.ts_state OWNER TO ai;
-
 --
 -- Name: ts_system; Type: TABLE; Schema: public; Owner: ai; Tablespace: 
 --
@@ -277,9 +234,6 @@ CREATE TABLE ts_system (
     draw_prob double precision,
     sigma_reversion double precision
 );
-
-
-ALTER TABLE public.ts_system OWNER TO ai;
 
 --
 -- Name: bot_pkey; Type: CONSTRAINT; Schema: public; Owner: ai; Tablespace: 

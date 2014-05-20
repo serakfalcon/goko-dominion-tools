@@ -23,9 +23,6 @@ CREATE TABLE card_url (
     url character varying(200) NOT NULL
 );
 
-
-ALTER TABLE public.card_url OWNER TO ai;
-
 --
 -- Data for Name: card_url; Type: TABLE DATA; Schema: public; Owner: ai
 --
@@ -287,17 +284,6 @@ Young Witch	http://wiki.dominionstrategy.com/images/9/9e/Young_Witch.jpg
 
 ALTER TABLE ONLY card_url
     ADD CONSTRAINT card_url_pkey PRIMARY KEY (card);
-
-
---
--- Name: card_url; Type: ACL; Schema: public; Owner: ai
---
-
-REVOKE ALL ON TABLE card_url FROM PUBLIC;
-REVOKE ALL ON TABLE card_url FROM ai;
-GRANT ALL ON TABLE card_url TO ai;
-GRANT SELECT ON TABLE card_url TO forum;
-
 
 --
 -- PostgreSQL database dump complete
